@@ -45,7 +45,7 @@ body{
 
 .main__page2{
 	position:relative;
-	height:70vh;
+	height:60vh;
 	width:100%;
 	transition: transform 1.5s ease-in-out;
 }
@@ -151,7 +151,7 @@ body{
 	width: 100%;
 	border-top-color: $gray-lighter;
 	border-top-style: solid;
-	height: 80vh;
+	height: 70vh;
 }
 
 .main__input, .logoContainer{
@@ -329,7 +329,7 @@ body{
 }
 
 .scroll{
-	transform: translateY(-70vh);
+	transform: translateY(-60vh);
 }
 
 .hidden{
@@ -347,14 +347,16 @@ body{
 
 .cit{
     font-family: Doulos;
-		font-size: 1.1em;
+		font-size: 0.7em;
 		flex: 1 1 100%;
+		align-self:center;
 }
 .pageBody{
 	text-align: justify;
 	font-size: 1em;
 	font-family: Futura;
 	flex: 1 1 80%;
+	align-self:center;
 }
 .pageSmall{
     font-size:0.7em;
@@ -369,7 +371,7 @@ body{
 .pron_container{
   position: relative;
 	height: 17%;
-	flex: 1 1 15%;
+	flex: 1 1 25%;
 	flex-direction:column;
 }
 
@@ -428,11 +430,12 @@ body{
 	}
 
 	.main__description {
-    width: 80vw;
+		width: unset;
     height: 100%;
     float: left;
     margin-right: 10vw;
     margin-left: 10vw;
+    flex: 0 0 80vw;
 	}
 	.pagePositioner {
 	    position: relative;
@@ -452,7 +455,6 @@ body{
     font-family: Doulos;
     font-size: 1.1em;
     width: 100%;
-    float: left;
 	}
 
 	.pageBody {
@@ -489,26 +491,32 @@ body{
 	}
 }
 
-@media screen and (max-width:980px) and (orientation: landscape), screen and (min-height:1300px) and (orientation: landscape){
+@media screen and (max-width:980px), screen and (min-height:1300px) and (orientation: landscape){
 
 	.main__namePos > p:nth-child(2){
 		display:none;
 	}
 	
 	.main__horizScroll{
-		height:45vh;
+		height: 70vh;
+		overflow: hidden;
 	}
 
 	.pageBody{
 		width:50%;
+		font-size: 0.5em;
 	}
 
 	.cit{
 		width:50%;
+		font-size: 0.5em;
 	}
+	.pronuncia{
+		font-size: 0.7em;
+	}
+
 	#desc2 > div > div.pageBody {
 		width:70%;
-		font-size:0.9em;
 	}
 
 	.main__page2pos{
@@ -521,6 +529,11 @@ body{
 
 	.arrowpointer, .arrowpointer::before{
 		display:none;
+	}
+
+	.pagePositioner{
+		flex-wrap: wrap;
+		align-content: center;
 	}
 }
 
